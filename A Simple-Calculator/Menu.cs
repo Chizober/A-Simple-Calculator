@@ -1,23 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace A_Simple_Calculator
+﻿namespace A_Simple_Calculator
 {
     public static class Menu
     {
         public static void ShowMenu()
         {
             string input;
-            begin:
+        begin:
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(
-                "\t\t\tWHAT WOULD YOU LIKE TO DO?\n\n"
-                    + "\t\t 1. Make a simple Calculation using operators \n"
-                    + "\t\t 2. Using Math Functions\n"
-                    + "\t\t 3. Press 3 to Exit \n"
+                "\n\t\t\t\t\tWHAT WOULD YOU LIKE TO DO?\n\n"
+                    + "\t\t\t\t\t 1. MAKE A SIMPLE CALCULATION USING OPERATORS \n"
+                    + "\t\t\t\t\t 2. USING MATH FUNCTIONS\n"
+                    + "\t\t\t\t\t 3. PRESS 3 TO EXIT \n"
             );
             Console.ResetColor();
             Console.Write("Pick One Option:");
@@ -30,12 +24,12 @@ namespace A_Simple_Calculator
                 System.Environment.Exit(1);
             Console.WriteLine("Invalid option!");
             goto begin;
-            SimpleOperations:
+        SimpleOperations:
             {
                 Operations.SimpleOperations();
                 goto begin;
             }
-            MathFunctions:
+        MathFunctions:
             {
                 MathFunctions.ShowMathsFunctions();
                 goto begin;
